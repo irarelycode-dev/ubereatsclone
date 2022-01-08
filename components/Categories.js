@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import { items } from "../utils/constants";
-import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Categories() {
   return (

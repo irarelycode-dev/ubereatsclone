@@ -14,7 +14,7 @@ export default function Searchbar({ cityHandler }) {
     <View style={styles.searchbarContainer}>
       <GooglePlacesAutocomplete
         placeholder="Search"
-        query={{ key: "google_api_key" }}  //your google api key goes here
+        query={{ key: "AIzaSyA8rAognY_er_ntnJTozxYdwv1T_p0EL8A" }}
         onPress={handleCityChange}
         styles={{
           textInput: {

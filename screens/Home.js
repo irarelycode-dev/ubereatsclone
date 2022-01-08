@@ -15,7 +15,7 @@ export default function Home() {
   const getRestaurantsFromYelp = async () => {
     const url = `https://api.yelp.com/v3/businesses/search?term=restaurant&location=${city}`;
     const apiKey =
-      "yelp api key";  //your yelp api key goes here
+      "65F7_uGhgR-lCxQ4bipEAmT-wKZQGBzBlnyyIZYVVyx9gTf8gde21-2GaCYKhJi-rLFN2-Ph2uQ3I05vv2pj2p3mDHx85nrPvcjc7Rw7_8IRkDTY3D6O8UGN0erGYXYx";
     const apiOptions = {
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -44,7 +44,7 @@ export default function Home() {
         <Searchbar cityHandler={setCity} />
       </View>
       <View style={styles.scrollContainer}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView>
           <Categories />
           <RestaurantItem localRestaurants={localRestaurants} />
         </ScrollView>
@@ -54,11 +54,15 @@ export default function Home() {
 }
 
 const styles = StyleSheet.create({
-  wrapper:{
-    flexDirection:"column"
+  wrapper: {
+    flexDirection: "column",
+    marginBottom:30
   },
   homeContainer: {
     backgroundColor: "#fff",
     padding: 15,
+  },
+  scrollContainer: {
+    flexDirection: "column",
   },
 });
